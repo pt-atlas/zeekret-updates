@@ -1,0 +1,94 @@
+# Zeekret
+
+An Android phone + Wear OS watch app for the **Zeekr 7X**. Its main job is a reliable **Bluetooth digital
+key**: the car unlocks as you walk up and locks as you walk away — once per arrival, predictable, no phone
+tapping. Around that it adds remote control, trip and charging stats, automations, a home-screen widget and
+push notifications. Inspired by, and built on, the open-source **OpenZeekr** project.
+Not affiliated with Zeekr, Geely or ECARX.
+
+**⬇ Download:** [latest release](https://github.com/pt-atlas/zeekret-updates/releases/latest) →
+`Zeekret.N.apk` (phone) and `Zeekret-Watch.N.apk` (Wear OS watch). Open the APK on your phone and allow
+"install unknown apps". New versions install over old ones. The app tells you when a newer version is out.
+
+> 🚗 **Tested with the Zeekr 7X only (SEA region).** Using it with a 7X is **at your own risk**; using it
+> with **any other Zeekr model is entirely at your own risk** — features may not work, may work differently,
+> or may behave unexpectedly.
+
+> 🧪 **Free, personal project — use at your own risk.** No warranty, no guarantee, no support. It may contain
+> mistakes, and its developer accepts **no responsibility** for anything that happens from using it — a door
+> that doesn't open or lock, a key that stops working, an account that gets signed out, or any other problem
+> with your car, phone or account.
+
+> ⚠️ **Your own car only.** Use Zeekret only with a Zeekr account and car that **you own or are explicitly
+> allowed to use**.
+
+This repository holds **no source code** — only the releases and `latest.json`, the small file the app reads
+to know whether a newer version exists.
+
+## How Zeekret differs from the official app
+
+1. **Digital key works on any Bluetooth-LE Android phone** — no approved-model list.
+2. **Proximity unlock *and* walk-away lock — without DK 3.0.** Runs on the standard digital-key Bluetooth
+   session; no DK 3.0 / UWB hardware needed. Tuned on real walk-up logs from a Zeekr 7X.
+3. **Seat ventilation (cooling), not just heating** — on cars that have it.
+4. **Standalone Wear OS companion** — lock / unlock directly over Bluetooth from the wrist.
+5. **Automations and an instant widget** — auto-Sentry, auto-cool, auto-lock, left-open alerts; the widget's
+   lock state flips the moment the car locks or unlocks.
+
+## Regions
+
+| Region | Status |
+|---|---|
+| **SEA** | ✅ **Verified on a Zeekr 7X** |
+| EU | From the original OpenZeekr code; not tested with Zeekret |
+| LA / ME | Untested |
+
+## 🔑 Getting your own keys (required)
+
+To talk to the Zeekr cloud you supply **six keys** yourself, extracted from **your own** Zeekr app install:
+
+- **Static, per-region keys** — `hmac_access_key`, `hmac_secret_key`, `password_public_key`: extract them from
+  the Zeekr APK with **[Wysie/zeekr_key_extractor](https://github.com/Wysie/zeekr_key_extractor)**
+  (`--region SEA` / `EU` / `LA`).
+- **Runtime keys** — `prod_secret`, `vin_key`, `vin_iv`: read them from **your own** running Zeekr app with a
+  dynamic-instrumentation tool (e.g. Frida), by observing `javax.crypto.Mac` / `SecretKeySpec` /
+  `IvParameterSpec`. See the credited projects for the current recipe.
+
+Enter them in the app's **first-run setup**, in **Settings**, or with **Import JSON**:
+
+```jsonc
+{ "hmac_access_key":"", "hmac_secret_key":"", "password_public_key":"",
+  "prod_secret":"", "vin_key":"", "vin_iv":"",
+  "email":"", "password":"", "vin":"" }
+```
+
+They're stored on your phone only, in encrypted storage.
+
+## Proximity unlock / walk-away lock
+
+Fixed signal levels, chosen in **Settings › Key setup** (tuned on a Zeekr 7X):
+
+| Preset | Approach unlock | Walk-away lock |
+|---|---|---|
+| Closest | −68 dBm · ~2.3 m | below −80 dBm for 3 s · ~7 m |
+| **Close** (recommended) | **−73 dBm · ~3.6 m** | below −84 dBm for 3 s · ~10 m |
+| Far | −78 dBm · ~5.8 m | below −88 dBm for 3 s · ~14 m |
+
+- Unlocks **once per arrival** (2 readings in a row at the unlock level); never repeat-unlocks.
+- Walk-away lock only after you've been at the car, then a **20 s grace**, then below the lock level for 3 s —
+  so it doesn't lock on you at the trunk.
+- The car stops broadcasting its key ~7–13 min after it locks; on a walk-back, touch the handle to wake it.
+- The Zeekr cloud allows one signed-in app per account — signing in here signs the official app out.
+
+## Licence
+
+Free. The app checks in with a licence server on start and every 12 h; each phone has a code in
+**Settings › About › Licence**. A licence can be revoked in case of misuse, which stops the app on that phone.
+
+## Credits & thanks 🙏
+
+- **OpenZeekr** — the inspiration and groundwork Zeekret is built on.
+- **[Wysie/zeekr_key_extractor](https://github.com/Wysie/zeekr_key_extractor)** — extracting the per-region app keys.
+- **[Fryyyyy/zeekr_homeassistant](https://github.com/Fryyyyy/zeekr_homeassistant)** — the login / HMAC / vehicle-list cloud flow.
+- **[mescon/zeekr-7x-home-assistant](https://github.com/mescon/zeekr-7x-home-assistant)** — the 3.0.x EU signing recipe and the runtime-key insight.
+- Map data © OpenStreetMap contributors · weather data by Open-Meteo.com.
