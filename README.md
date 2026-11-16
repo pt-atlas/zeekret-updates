@@ -37,7 +37,11 @@ to know whether a newer version exists.
 
 ## 🖥️ Head-unit side app: Blindspot for the Zeekr 7X
 
-A separate app that runs **on the car's head unit** (not on your phone). More at **[zeekret.pages.dev](https://zeekret.pages.dev/)**.
+A separate app that runs **on the car's head unit** (not on your phone).
+
+> 📲 **Install it from the car:** open the browser **on the car's head-unit screen**, go to
+> **[zeekret.pages.dev](https://zeekret.pages.dev/)**, then download and install the app there.
+> Opening the link on a phone or computer won't install it on the car.
 
 - **Blindspot camera.** When you indicate, that side's camera shows on the head-unit screen, the windscreen HUD, or both. It goes away when the indicator stops.
 - **Straightened view.** The fisheye picture is turned into a normal view, mirrored like a real mirror, and you can adjust the aim.
