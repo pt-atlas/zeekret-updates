@@ -35,26 +35,57 @@ to know whether a newer version exists.
 5. **Automations and an instant widget** — auto-Sentry, auto-cool, auto-lock, left-open alerts; the widget's
    lock state flips the moment the car locks or unlocks.
 
-## 🖥️ Head-unit side app: Blindspot for the Zeekr 7X
+## 🖥️ Head-unit side app: Zeekret Dash (experimental)
 
-A separate app that runs **on the car's head unit** (not on your phone).
+**Zeekret Dash** runs **on the Zeekr 7X head unit**, not on your phone. It's the next version of Blindspot, with car controls and automations added.
 
 > 📲 **Install it from the car:** open the browser **on the car's head-unit screen**, go to
 > **[zeekret.pages.dev](https://zeekret.pages.dev/)**, then download and install the app there.
 > Opening the link on a phone or computer won't install it on the car.
 
-- **Blindspot camera.** When you indicate, that side's camera shows on the head-unit screen, the windscreen HUD, or both. It goes away when the indicator stops.
-- **Straightened view.** The fisheye picture is turned into a normal view, mirrored like a real mirror, and you can adjust the aim.
-- **Safety extras.**
-  - It stays up until the wheel is straight.
-  - It shows on a turn without the indicator (below 30 km/h, wheel turned over 90°).
-  - It checks for a forgotten indicator (above 60 km/h).
-  - It shows with the door-open warning.
-  - It spots vehicles coming from behind (experimental, off by default).
-- **Rearview mirror on the head unit.** Rearview, Slide-in or Blindspot layout, with a button that shows only in D. You can move and resize it, and it has night anti-glare (Off / Low / High).
-- **Dash cam.** It records all four cameras in 1-minute clips to a USB stick or car storage, stamped with date, time and speed. A hard stop locks the clip, and there's a Playback tab.
-- **Reliability.** It starts at boot, restarts itself if it stops, runs at about 30 fps and keeps a fault log.
-- **Licence.** 7-day free trial, then a paid licence (see the site). It works offline once issued.
+**Home.** A grid of cards: tap one to act, hold it to open its settings. Car cards cover acceleration mode, steering,
+damping, the sunroof shade and the rear fog light.
+
+**Blindspot.**
+- When you indicate, that side's camera shows on the head unit, the HUD or both. It slides in and out in 0.2 s.
+- The car's blindspot lamp (the light in the door mirror) gives that side's picture a red edge. Above 60 km/h it also
+  opens the camera when you haven't indicated.
+- It also opens on a door opening, a proximity warning, a forgotten indicator, or a turn without indicating (below 30 km/h).
+- **Head-unit mirror:** Rearview, Slide-in or Blindspot view, with night anti-glare (Off / Low / High).
+
+**Dash cam.** It records 1-minute clips at 2560×1440 to the USB stick, stamped with date, time, speed and position.
+There's a Playback tab.
+
+**Car controls.**
+
+| Control | Choices |
+|---|---|
+| Acceleration mode | Comfort / Normal / Sport |
+| Steering | Comfort / Standard / Sport |
+| Damping | Comfort / Standard / Sport (confirmed working on the car) |
+| Sunroof shade | Closed / 25 / 50 / 75 % / Open |
+| Rear fog light | On / Off |
+| AC, temperature zones, tailgate height | on the Car page |
+
+To find a car setting, take a snapshot, change the setting in the car's menu, then compare to see which signal
+changed. **Search car signals** lists signals by name. Both only read from the car.
+
+**Automations: "When … only if … do …"**
+- **When:** the car turns on or off; the gear goes to P, D or R; speed reaches or drops to a value, or enters or
+  leaves a range (0–200 km/h, in 5 km/h steps); outside temperature rises or drops to a value; it gets dark or
+  light; rain starts or stops.
+- **Only if:** workdays or weekend, gear, dark or light, raining or dry, speed above, below or between, outside
+  temperature above or below.
+- **Do:** any car control, plus app actions (Blindspot on/off, mirror, anti-glare, night dimming, dash cam).
+- **No flickering:** a rule only fires again after the speed or temperature has moved back past its number, and at
+  most once every 30 s for speed (60 s for temperature).
+
+**About.** Settings backup saves all settings and rules to the USB stick and restores them (the licence isn't
+included). The fault log can be sent to the developer for checking.
+
+**Licence.** A 7-day free trial, then a paid licence (see the site). Your licence is kept when you update.
+
+**Being worked on.** Finding the adaptive matrix high-beam signal, and smoother HUD video in town.
 
 ## Regions
 
