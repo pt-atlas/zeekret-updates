@@ -35,6 +35,23 @@ to know whether a newer version exists.
 5. **Automations and an instant widget** — auto-Sentry, auto-cool, auto-lock, left-open alerts; the widget's
    lock state flips the moment the car locks or unlocks.
 
+## 🖥️ Head-unit side app: Blindspot for the Zeekr 7X
+
+A separate app that runs **on the car's head unit** (not on your phone). More at **[zeekret.pages.dev](https://zeekret.pages.dev/)**.
+
+- **Blindspot camera.** When you indicate, that side's camera shows on the head-unit screen, the windscreen HUD, or both. It goes away when the indicator stops.
+- **Straightened view.** The fisheye picture is turned into a normal view, mirrored like a real mirror, and you can adjust the aim.
+- **Safety extras.**
+  - It stays up until the wheel is straight.
+  - It shows on a turn without the indicator (below 30 km/h, wheel turned over 90°).
+  - It checks for a forgotten indicator (above 60 km/h).
+  - It shows with the door-open warning.
+  - It spots vehicles coming from behind (experimental, off by default).
+- **Rearview mirror on the head unit.** Rearview, Slide-in or Blindspot layout, with a button that shows only in D. You can move and resize it, and it has night anti-glare (Off / Low / High).
+- **Dash cam.** It records all four cameras in 1-minute clips to a USB stick or car storage, stamped with date, time and speed. A hard stop locks the clip, and there's a Playback tab.
+- **Reliability.** It starts at boot, restarts itself if it stops, runs at about 30 fps and keeps a fault log.
+- **Licence.** 7-day free trial, then a paid licence (see the site). It works offline once issued.
+
 ## Regions
 
 | Region | Status |
