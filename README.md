@@ -39,7 +39,7 @@ to know whether a newer version exists.
 
 **Zeekret Dash** runs **on the Zeekr 7X head unit**, not on your phone. It's the next version of Blindspot, with car controls and automations added.
 
-📖 **Full feature guide (English and Thai) and changelog:** [pt-atlas/zeekret-dash](https://github.com/pt-atlas/zeekret-dash)
+📖 **Full feature guide and changelog:** [pt-atlas/zeekret-dash](https://github.com/pt-atlas/zeekret-dash)
 
 > 📲 **Install it from the car:** open the browser **on the car's head-unit screen**, go to
 > **[zeekret.pages.dev](https://zeekret.pages.dev/)**, then download and install the app there.
