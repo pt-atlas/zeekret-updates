@@ -44,7 +44,7 @@ to know whether a newer version exists.
 > Opening the link on a phone or computer won't install it on the car.
 
 **Home.** A grid of cards: tap one to act, hold it to open its settings. Car cards cover acceleration mode, steering,
-damping, the sunroof shade and the rear fog light.
+damping (Performance trim only), the sunroof shade and the rear fog light.
 
 **Blindspot.**
 - When you indicate, that side's camera shows on the head unit, the HUD or both. It slides in and out in 0.2 s.
@@ -62,7 +62,7 @@ There's a Playback tab.
 |---|---|
 | Acceleration mode | Comfort / Normal / Sport |
 | Steering | Comfort / Standard / Sport |
-| Damping | Comfort / Standard / Sport (confirmed working on the car) |
+| Damping | Comfort / Standard / Sport — **Performance trim only** (shows only when the app detects the car's damping value) |
 | Sunroof shade | Closed / 25 / 50 / 75 % / Open |
 | Rear fog light | On / Off |
 | AC, temperature zones, tailgate height | on the Car page |
