@@ -111,7 +111,7 @@ Settings are under **Map link** in Zeekret Dash's side menu. Type the car's pair
 **About.** Settings backup saves all settings and rules to the USB stick and restores them (the licence isn't
 included). The fault log can be sent to the developer for checking.
 
-**Licence.** A 7-day free trial, then a paid licence (see the site). Your licence is kept when you update.
+**Licence.** A 30-day free trial, then a paid licence (see the site). Your licence is kept when you update.
 
 **Being worked on.** Finding the adaptive matrix high-beam signal, and smoother HUD video in town.
 
