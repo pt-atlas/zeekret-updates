@@ -22,6 +22,11 @@ Not affiliated with Zeekr, Geely or ECARX.
 > ⚠️ **Your own car only.** Use Zeekret only with a Zeekr account and car that **you own or are explicitly
 > allowed to use**.
 
+> 🔒 **A Zeekr owner's private project, on a private server. No personal data is collected** — no location, no
+> account, no driving data, no analytics. Your Zeekr account and keys stay on your phone (encrypted) and the app talks to the Zeekr
+> cloud directly. The only link to our server is a code: the app's licence code, and for battery at arrival the car's
+> pair code — and what travels with that code is locked so the server can't read it.
+
 ## The Zeekret apps
 
 | App | Runs on | What it does |
