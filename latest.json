@@ -1,6 +1,6 @@
 {
-  "versionCode": 131,
-  "versionName": "Zeekret .58",
-  "notes": "Bring your own keys: enter your six keys in setup, Settings or Import JSON (see the download page). Keys already saved in the app stay.",
-  "url": "https://github.com/pt-atlas/zeekret-updates/releases/tag/zeekret-58"
+  "versionCode": 135,
+  "versionName": "Zeekret .60",
+  "notes": "Battery at arrival: in Google Maps share a place to Zeekret, and Zeekret Dash in the car shows the battery % you'll arrive with. Type the car's pair code in Settings once.",
+  "url": "https://github.com/pt-atlas/zeekret-updates/releases/tag/zeekret-60"
 }
