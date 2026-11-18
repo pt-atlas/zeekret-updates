@@ -22,6 +22,16 @@ Not affiliated with Zeekr, Geely or ECARX.
 > ⚠️ **Your own car only.** Use Zeekret only with a Zeekr account and car that **you own or are explicitly
 > allowed to use**.
 
+## The Zeekret apps
+
+| App | Runs on | What it does |
+|---|---|---|
+| **Zeekret** (this one) | Phone + Wear OS watch | Bluetooth digital key, remote control, stats, widget, automations |
+| **[Zeekret Dash](https://github.com/pt-atlas/zeekret-dash)** | Car head unit | Blindspot camera on the HUD, digital mirror, dash cam, car controls, automations, **battery at arrival** |
+| **[Zeekret Maps Link](https://github.com/pt-atlas/zeekret-maps-link)** | Phone | Sends your live Google Maps route to Zeekret Dash, so the car shows the battery % you'll arrive with |
+
+All three are free to try, closed-source, and published here as documentation and downloads only.
+
 This repository holds **no source code** — only the releases and `latest.json`, the small file the app reads
 to know whether a newer version exists.
 
@@ -81,6 +91,17 @@ changed. **Search car signals** lists signals by name. Both only read from the c
 - **Do:** any car control, plus app actions (Blindspot on/off, mirror, anti-glare, night dimming, dash cam).
 - **No flickering:** a rule only fires again after the speed or temperature has moved back past its number, and at
   most once every 30 s for speed (60 s for temperature).
+
+**Battery at arrival.** The car shows the battery % you'll arrive with, as one small line: **🔋 69% 🏁** (or
+**🔋 62% 🏠** for home); orange below 20 %, red below 5 %. The destination comes from:
+- **[Zeekret Maps Link](https://github.com/pt-atlas/zeekret-maps-link)** on your phone: the **live Google Maps
+  route** (also through Android Auto). Change the destination in Google Maps and the car follows.
+- **Zeekret (this app, .60 and newer):** in Google Maps tap a place ▸ **Share ▸ Zeekret ▸ Battery at arrival**. It
+  also sends the car's average consumption from the Zeekr cloud, which makes the % more accurate.
+- **Home** or a **saved place**, picked on the car.
+
+Settings are under **Map link** in Zeekret Dash's side menu. Type the car's pair code (shown there) into Zeekret
+(Settings) and / or Zeekret Maps Link. Everything sent is end-to-end encrypted; the server in between can't read it.
 
 **About.** Settings backup saves all settings and rules to the USB stick and restores them (the licence isn't
 included). The fault log can be sent to the developer for checking.
