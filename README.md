@@ -37,6 +37,8 @@ Not affiliated with Zeekr, Geely or ECARX.
 
 All three are free to try, closed-source, and published here as documentation and downloads only.
 
+**🌐 All three apps on one page:** **[zeekret.pages.dev](https://zeekret.pages.dev/)**, in two parts: **📱 Phone apps** (Zeekret, Zeekret Maps Link; downloads from the latest GitHub release) and **🚗 Zeekr 7X side app** (Zeekret Dash, opened on the car's screen).
+
 This repository holds **no source code** — only the releases and `latest.json`, the small file the app reads
 to know whether a newer version exists.
 
