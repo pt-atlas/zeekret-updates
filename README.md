@@ -33,7 +33,7 @@ Not affiliated with Zeekr, Geely or ECARX.
 |---|---|---|
 | **Zeekret** (this one) | Phone + Wear OS watch | Bluetooth digital key, remote control, stats, widget, automations |
 | **[Zeekret Dash](https://github.com/pt-atlas/zeekret-dash)** | Car head unit | Blindspot camera on the HUD, digital mirror, dash cam, car controls, automations, **battery at arrival** |
-| **[Zeekret Maps Link](https://github.com/pt-atlas/zeekret-maps-link)** | Phone | Sends your live Google Maps route to Zeekret Dash, so the car shows the battery % you'll arrive with; a charger tapped in the car opens in Google Maps (1.2) |
+| **[Zeekret Maps Link](https://github.com/pt-atlas/zeekret-maps-link)** | Phone | Sends your live Google Maps route to Zeekret Dash, so the car shows the battery % you'll arrive with; a charger tapped in the car opens in Google Maps (1.2). Works without the Zeekret app; needs Zeekret Dash (pair code) |
 
 All three are free to try, closed-source, and published here as documentation and downloads only.
 
