@@ -11,10 +11,6 @@ Not affiliated with Zeekr, Geely or ECARX.
 "install unknown apps". New versions install over old ones, and the app shows a notification when a newer version
 is out.
 
-> ⚠️ **Coming from .61 or older?** From **.62** Zeekret has its own app id, so it installs as a **new app** next to the
-> old one (and can also sit next to the original OpenZeekr app). Set the new one up again (sign in, Bluetooth digital
-> key, widget, watch), then **uninstall the old Zeekret** on the phone and the watch. Later versions install over .62.
-
 > 🚗 **Tested with the Zeekr 7X only (SEA region).** Using it with a 7X is **at your own risk**; using it
 > with **any other Zeekr model is entirely at your own risk** — features may not work, may work differently,
 > or may behave unexpectedly.
