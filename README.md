@@ -112,7 +112,10 @@ changed. **Search car signals** lists signals by name. Both only read from the c
 Settings are under **Map link** in Zeekret Dash's side menu. Type the car's pair code (shown there) into Zeekret
 (Settings) and / or Zeekret Maps Link. Everything sent is end-to-end encrypted; the server in between can't read it.
 
-**Car licence (Zeekret .63 and newer):** with the pair code typed into Zeekret (Settings ▸ Zeekret Dash), that card
+**Linking (Zeekret .64 and newer):** in Settings ▸ Zeekret Dash tap **Scan car code** and point the phone at the QR in
+Zeekret Dash ▸ Map link (or type its code). **Unlink** forgets the car.
+
+**Car licence (Zeekret .63 and newer):** with the car linked (Settings ▸ Zeekret Dash), that card
 also shows your Zeekret Dash car's licence (status and days left) with a **Renew** button that opens its pay page.
 Only a one-way hash of the pair code is sent, never the code itself. Needs Zeekret Dash 1.24 beta 2 or newer.
 
