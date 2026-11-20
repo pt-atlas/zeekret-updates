@@ -100,8 +100,9 @@ changed. **Search car signals** lists signals by name. Both only read from the c
 - **No flickering:** a rule only fires again after the speed or temperature has moved back past its number, and at
   most once every 30 s for speed (60 s for temperature).
 
-**Battery at arrival.** The car shows the battery % you'll arrive with, as one small line: **🔋 69% 🏁** (or
-**🔋 62% 🏠** for home); orange below 20 %, red below 5 %. The destination comes from:
+**Battery at arrival.** The car shows the battery % you'll arrive with: one small line on the head unit, **🔋 69% 🏁**
+(or **🔋 62% 🏠** for home), and on the HUD the arrival time on top with the % and km below, **🏁 08:25** / **🔋 69% · 12 km**.
+🪫 orange from 1 to 20 %, 🪫 0 % in red if you won't make it. The destination comes from:
 - **[Zeekret Maps Link](https://github.com/pt-atlas/zeekret-maps-link)** on your phone: the **live Google Maps
   route** (also through Android Auto). Change the destination in Google Maps and the car follows.
 - **Zeekret (this app, .60 and newer):** in Google Maps tap a place ▸ **Share ▸ Zeekret ▸ Battery at arrival**. It
